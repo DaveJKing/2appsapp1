@@ -1,0 +1,31 @@
+<h1>Listing examiners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Current</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @examiners.each do |examiner| %>
+      <tr>
+        <td><%= examiner.firstname %></td>
+        <td><%= examiner.lastname %></td>
+        <td><%= examiner.current %></td>
+        <td><%= link_to 'Show', examiner %></td>
+        <td><%= link_to 'Edit', edit_examiner_path(examiner) %></td>
+        <td><%= link_to 'Destroy', examiner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Examiner', new_examiner_path %>

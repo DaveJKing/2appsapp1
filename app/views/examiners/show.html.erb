@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @examiner.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @examiner.lastname %>
+</p>
+
+<p>
+  <strong>Current:</strong>
+  <%= @examiner.current %>
+</p>
+
+<%= link_to 'Edit', edit_examiner_path(@examiner) %> |
+<%= link_to 'Back', examiners_path %>
